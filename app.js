@@ -51,8 +51,7 @@ circle_selector.addEventListener('click',()=>{//change color of circle selector 
   
 
   //change color of circle selector based on counter change_colorCount
-},{passive: true});
-
+});
 
 function changeTheme(){//change color of circle selector
   switch (change_colorCount) {
@@ -70,13 +69,12 @@ function changeTheme(){//change color of circle selector
 
 form.addEventListener('submit', function(e) {//prevent form from submitting
   e.preventDefault();
-},{passive: true});
+});
 
 keys.forEach(key => {//add event listener to each key
   key.addEventListener('click', () =>{
     addValue(key.textContent);
-  },{passive: true});
-
+  })
 })
 
 //Copilot, can you simpilfy this code below?
@@ -102,7 +100,7 @@ function Reset()//reset input
 
 reset.addEventListener('click', () => {//reset input every time reset button is clicked
   Reset();
-},{passive: true});
+});
 
 Equals.addEventListener('click', () => {//calculate input
   let result;
@@ -136,14 +134,9 @@ Equals.addEventListener('click', () => {//calculate input
     }
   }
   
-},{passive: true});
+});
 
 function printError(msg){//this function prints an error based on the msg parameter, so we can reuse it <ith any error we want
   setTimeout(() => {input.value = msg;}, 10);
     setTimeout(Reset,1000);
 }
-
-
-
-
-
